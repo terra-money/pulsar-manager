@@ -65,6 +65,8 @@ COPY docker/init_db.sql /pulsar-manager/
 
 COPY docker/entrypoint.sh /pulsar-manager/
 
+COPY docker/create_user.sh /pulsar-manager/
+
 COPY front-end/dist /usr/share/nginx/html/
 
 ENTRYPOINT [ "/pulsar-manager/entrypoint.sh" ]

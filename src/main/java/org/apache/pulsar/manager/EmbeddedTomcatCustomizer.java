@@ -75,7 +75,7 @@ public class EmbeddedTomcatCustomizer implements
                                 try (FileReader reader = new FileReader(configFile)) {
                                     props.load(reader);
                                 }
-                                boolean bkvmEnabled = Boolean.parseBoolean(props.getProperty("bkvm.enabled", "false"));
+                                boolean bkvmEnabled = Boolean.parseBoolean(props.getProperty("bkvm.enabled", "true"));
                                 log.info("Read bkvm.enabled = {}", bkvmEnabled);
                                 if (bkvmEnabled) {
                                     System.setProperty("bookkeeper.visual.manager.config.path", configFile.getAbsolutePath());
